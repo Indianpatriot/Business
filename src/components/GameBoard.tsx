@@ -50,7 +50,7 @@ const INITIAL_PROPERTIES: Property[] = [
   { id: 'ranchi', name: 'Ranchi', price: 3000, rent: 300, color: '#6B7280' },
   { id: 'chance4', name: 'Chance', price: 0, rent: 0, color: '#F59E0B' },
   { id: 'visakhapatnam', name: 'Visakhapatnam', price: 4000, rent: 400, color: '#6B7280' },
-  { id: 'vijayawada', name: 'Vijayawada', price: 3500, rent: 350, color: '#6B7280' },
+  { id: 'hyderabad2', name: 'Hyderabad', price: 6500, rent: 650, color: '#6B7280' },
   { id: 'tax4', name: 'Customs Tax', price: 0, rent: 2000, color: '#8B5CF6' },
   { id: 'hyderabad', name: 'Hyderabad', price: 6000, rent: 600, color: '#6B7280' },
   
@@ -102,7 +102,7 @@ export function GameBoard({ players, setPlayers, currentPlayer, setCurrentPlayer
     setTimeout(() => {
       const total = dice1 + dice2;
       const player = players[currentPlayer];
-      
+
       if (player.inJail) {
         if (dice1 === dice2) {
           toast.success('Rolled doubles! You\'re free!');
@@ -126,9 +126,9 @@ export function GameBoard({ players, setPlayers, currentPlayer, setCurrentPlayer
       } else {
         movePlayer(total);
       }
-      
+
       setIsRolling(false);
-    }, 600);
+    }, 300);
   };
 
   const movePlayer = (steps: number) => {

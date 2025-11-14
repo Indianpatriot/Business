@@ -10,7 +10,7 @@ interface PlayerSelectionProps {
 export function PlayerSelection({ onStartGame, onBack }: PlayerSelectionProps) {
   const [selectedCount, setSelectedCount] = useState(2);
   const [startingCash, setStartingCash] = useState(15000);
-  const [playerNames, setPlayerNames] = useState(['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5']);
+  const [playerNames, setPlayerNames] = useState(['You', 'Opponent 1', 'Opponent 2', 'Opponent 3', 'Opponent 4']);
   const [editingPlayer, setEditingPlayer] = useState<number | null>(null);
 
   const handleNameChange = (index: number, newName: string) => {
